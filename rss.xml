@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+  <channel>
+    <title>zookfish's tank</title>
+    <link>https://zookfish.com</link>
+    <description>zooks website</description>
+    <item>
+      <title>Lorem Ispum</title>
+      <link>https://zookfish.com/blog/2026-02-12post.html</link>
+      <description>testing blog post for lorem ispum</description>
+    </item>
+  </channel>
+</rss>
