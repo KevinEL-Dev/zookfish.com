@@ -20,25 +20,38 @@
     </div>
     <hr>
     <h1>What I'm doing now</h1>
-    <p>Updated 2026-02-16</p>
+    <p>Updated 2026-02-17</p>
 
-    <h2>Pushed some changes to my rust project</h2>
-    <p>Currently I am working on creating a cli/daemon program written in rust. The main goal of this project is to
-      provide hytale server owners a quick way to monitor their server. Basically htop but tailored to watch activity
-      from Hytale.
+    <h2>Changing daily calorie distribution</h2>
+    <p>My caloric deficit in MacroFactor has decreased by 80 calories. To accommodate this I will be eating less during
+      the morning so that I can eat more food during the latter half of the day.</p>
+    <h2>Gym</h2>
+    <p>Hit legs today and it was a pretty good session. My top set for bulgarian split squats I did 95lb for 8 on both
+      left and right leg.
     </p>
-    <p> What I did exactly was I just added more commands to the cli portion of the program. You can pass in system
-      resource (cpu, memory, or network) and a time in seconds. The program will return system usuage over x seconds.
+    <h2>More updates regarding rust cli/daemon project</h2>
+    <p>So in order for my program to monitor how much resources hytale is using I need to know every hytale process that
+      is running and take the sum cpu%. This seems like a lot of work but for now I found a command that should get the
+      job done.
     </p>
-    <p> The plan is for the program to parse htyale logs for things like players joining, players leaving, and other
-      actions like theses. From there the program will match these actions to system resource spikes. So, if a player
-      joins and the cpu spikes, the program will give you that inforamtion in like a timeline.
+    <p>top -b -d 1 -n 2 | awk '$1 == "PID" {block_num++; next} block_num == 2 {sum += $9;} END {print sum}'</p>
+    <p>This command basically runs top, where top then prints a first snapshot of all processes. Top then waits a second
+      and then prints another snapshot of the processes. From there we pipe that output and use awk. I heard of awk but
+      I forgot what it does. For now I know that it does take the cpu% of each process that has the PID and its
+      children.
     </p>
-
-    <h2>Play some soccer</h2>
-    <p> About to go play some soccer tonight. Lets see if I can get 10 juggles! </p>
-    <h2>J*b</h2>
-    <p> Got back into applying to j*bs again. So thats fun.</p>
+    <p>This will be the plan to try and get the cpu% of all hytale processes and its children. So the first step is that
+      I need to get the PID of the parent hytale process. We just use the command:
+    </p>
+    <p>ps aux | grep java -XX:AOTCache=HytaleServer.aot</p>
+    <p>This will include the grep process as well so we pipe this into the command:</p>
+    <p>head -n 1</p>
+    <p>This should give us the parent process that hytale runs.</p>
+    <h2>Playing soccer today</h2>
+    <p>Club that I am a part of is having some soccer games so I will partake.</p>
+    <h2>Blaze pizza</h2>
+    <p>After playing some soccer, I will probably go to blaze if it doesnt close. Probably will get a half pie with
+      chicken and bbq.</p>
     <hr>
     <a href="./index.html">return</a>
   </div>
