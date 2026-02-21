@@ -20,52 +20,41 @@
     </div>
     <hr>
     <h1>What I'm doing now</h1>
-    <p>Updated 2026-02-18</p>
+    <p>Updated 2026-02-20</p>
 
     <h2>Gym</h2>
     <p>
-      Today I went to the gym and worked out my arms. The workout was good, did a new exercise for my triceps and I
-      think I will add it to my routine.
+      Today I went to the gym and hit legs. Today was more of a high rep and lighter workout to go easy on my joints.
     </p>
-    <h2> Rust project dark realization</h2>
-    <p>
-      I’m currently still working on a rust cli, and hopefully daemon, tool that will provide hytale server owners a way
-      to see how much resources over x time is being used by hytale. The program should also provide a way to interpret
-      why the hytale server spikes in usage of a system resource based on the logs provided by the hytale process.
-    </p>
-    <p>
-      So in my last update I found a command that I thought provided the total cpu% utilization under the parent process
-      of hytale.
+    <h2>Panda Express</h2>
 
+    <p>
+      Got some panda express today! Recently I had a presentation at school and it went well so I felt I had to treat
+      myself. To stay within my macros I got:
     </p>
-    <p>Below is the command:</p>
+    <ul>
+      <li>Half super greens</li>
+      <li>Half chow mein</li>
+      <li>Honey sesame chicken</li>
+      <li>Teriyaki chicken</li>
+    </ul>
+    <p>
+      Macros came out to be around 910 calories but I only ate breakfast so I stayed within my deficit.
+    </p>
+    <h2>Rust cli update</h2>
+    <p>Made some progress in my rust cli project that monitors Hytale’s processes and returns a digestible view of how
+      much resources its consuming in a sense.</p>
+    <p>The cli will return, if prompted to monitor cpu usage, the average amount of cpu cores used over x time.</p>
+    <p>This information isn’t useful yet considering the user needs to know overall how the system is performing before
+      deciding if a bottleneck is at play.</p>
+    <p>
+      I also added a readme and a MIT license.
+    </p>
+    <h2>Soccer</h2>
+    <p>
+      Got a soccer game that I’m going to tomorrow so that should be fun and also very hot.
+    </p>
 
-    <p>top -b -d 1 -n 2 | awk '$1 == "PID" {block_num++; next} block_num == 2 {sum += $9;} END {print sum}'</p>
-
-    <p>Top does not show a tree of processes unlike htop does.</p>
-    <p>
-      So when I run the command above it only retrieves the one hytale process and its not doing what I expected it to
-      do.
-    </p>
-    <p>
-      I did manage to retrieve the pid for hytale but that is too much for me to get into and I’m feeling lazy.
-    </p>
-    <p>
-      The main thing that I’m currently questioning is, if I wanted to know how intensive a hytale server is. Is
-      retrieving every cpu% from the parent hytale process and all its children an accurate way to reflect that?
-    </p>
-    <p>
-      I think I may need to do more research regarding what exactly htop is showing me. To help me determine a good way
-      to show how your system is performing when hytale is running
-    </p>
-    <p>
-      For now, I think I’m back in the planning phase of either trying to figure out a better way determine how
-      intensive a hytale server.
-    </p>
-    <h2>AI</h2>
-
-    <p>I feel I should just ask AI but to me I think I would just be cheating myself out of this problem solving
-      oppurtunity.</p>
     <hr>
     <a href="./index.html">return</a>
   </div>
