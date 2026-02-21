@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
   <channel>
     <title>zookfish's tank</title>
@@ -10,8 +10,11 @@
       <link>https://zookfish.com/blog/2026-02-21post.html</link>
       <guid>https://zookfish.com/blog/2026-02-21post.html</guid>
       <pubDate>Sat, 21 Feb 2026 10:28:00 -0500</pubDate>
-      <description>
-        <h1> I stopped watching youtube for 30 days</h1>
+      <description><![CDATA[
+        I stopped watching youtube for 30 days
+      ]]></description>
+
+      <content:encoded><![CDATA[
         <p>
           Funny enough the reason I stopped watching youtube was because of a youtube video. Props to Lrnjulie who made a
           video on what happened after 1 month without youtube.
@@ -64,7 +67,7 @@
         <p>Remember that you are
           loved and thanks for reading.
         </p>
-      </description>
+        ]]></content:encoded>
     </item>
     <item>
       <title>How I would go about losing weight in 2026</title>
